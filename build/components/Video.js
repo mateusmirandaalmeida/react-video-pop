@@ -86,6 +86,7 @@ var VideoPop = function (_Component) {
         show: false,
         popPlaying: false
       });
+      _this.props.onClose && _this.props.onClose();
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -123,7 +124,6 @@ var VideoPop = function (_Component) {
       return _react2.default.createElement(
         _react2.default.Fragment,
         null,
-        show ? _react2.default.createElement(_Overlay2.default, null) : null,
         _react2.default.createElement(_Pop2.default, {
           src: Src,
           vidRef: Vid,
@@ -161,5 +161,6 @@ VideoPop.propTypes = {
   Poster: _propTypes2.default.string,
   mute: _propTypes2.default.bool,
   autoplay: _propTypes2.default.bool,
-  ratio: _propTypes2.default.object
+  ratio: _propTypes2.default.object,
+  onClose: _propTypes2.default.func
 };

@@ -90,6 +90,7 @@ class VideoPop extends Component {
       show: false,
       popPlaying: false,
     });
+    this.props.onClose && this.props.onClose();
   };
 
   render() {
@@ -126,4 +127,5 @@ VideoPop.propTypes = {
   mute: PropTypes.bool,
   autoplay: PropTypes.bool,
   ratio: PropTypes.object,
+  onClose: PropTypes.func,
 };

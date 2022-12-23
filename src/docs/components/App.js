@@ -63,6 +63,9 @@ const Comp = () => {
         mute={false}
         autoplay={true}
         root="video-root"
+        onClose={() => {
+          console.log(`fechou`);
+        }}
         ratio={{ w: 16, h: 9 }}
       />
     </div>
@@ -70,14 +73,20 @@ const Comp = () => {
 };
 
 export default class App extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        teste: true,
+      });
+    }, 5 * 1000);
+  }
+
   render() {
     return (
       <Title>
         <Head>
           <ContLeft>
-            <Wrapper>
-              <Comp />
-            </Wrapper>
+            <Comp />
           </ContLeft>
           <ContRight>
             <TextContent />
