@@ -97,7 +97,7 @@ class VideoPop extends Component {
     const { Vid, show, currTime, mute, play } = this.state;
     return (
       <React.Fragment>
-        {show ? <Overlay /> : null}
+        {/* {show ? <Overlay /> : null} */}
         <Pop
           src={Src}
           vidRef={Vid}
